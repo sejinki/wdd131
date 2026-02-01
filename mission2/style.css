@@ -16,13 +16,11 @@ p {
 }
 hr {
     height: 1px;
-    background-color: #035f9c;
+    background-color: #035f9c(0, 0, 0, 0.3);
     width: 80%;
     margin-top: 0px;
     margin-bottom: 50px;
 }
-
-
 
 h1{
     text-align: center;

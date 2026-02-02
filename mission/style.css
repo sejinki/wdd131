@@ -47,14 +47,19 @@ img {
 
 .list {
     list-style-type: none;
-    width: 90%;
+    width: 100%;
 }
 
 .italic {
     font-style: italic;
 }
 
-.numbered-list {
+
+
+
+
+
+/* .numbered-list {
     margin-left: 40px;
     margin-top: 10px;
-}
+} */

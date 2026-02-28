@@ -133,12 +133,12 @@ header h1 {
 
     .book h2 {
         grid-area: title;
-        text-align: right; /* optional on desktop */
+        text-align: right;
     }
 
     .book-meta {
         grid-area: meta;
-        text-align: right; /* optional */
+        text-align: right;
     }
 
     .book-content {

@@ -20,7 +20,7 @@ function listTemplate(item){
     return `<li>${item}</li>`;
 };
 
-myList.innerHTML = stepsHtml;
+myList.innerHTML = stepsHtml.join(''); //join turns the array into a string, and we can specify a separator if we want one, but in this case we don't want one so we just use an empty string
 //join turns the array into a string, and we can specify a separator if we want one, but in this case we don't want one so we just use an empty string
 
 let grades = [`A`, `B`, `C`];

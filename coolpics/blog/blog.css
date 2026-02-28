@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 4px solid #333;
+    border-bottom: 4px solid #e2c49b;
+    background-color: #ffffff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #3b223c;
+    margin-bottom: 1rem;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: right;
+    gap: 3rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #b22234;
+    font-weight: bold;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    text-decoration: underline;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    padding-right: 2rem;
+}
+
+.book {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid #e2c49b;
+}
+
+/* Book Title */
+
+.book h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #b22234;
+    margin-bottom: 1rem;
+}
+
+.book img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.book-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.book-meta {
+    text-align: left;
+    grid-area: meta;
+    
+}
+
+#sum {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+
+    .book {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "meta"
+            "title"
+            "content";
+        gap: 1.5rem;
+        padding: 0 1rem 1.5rem 1rem;
+    }
+
+    .book-meta {
+        text-align: right;
+    }
+
+    .book h2 {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .book {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "title title"
+            "meta  content";
+        gap: 2rem;
+        align-items: start;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .book h2 {
+        grid-area: title;
+        text-align: right; /* optional on desktop */
+    }
+
+    .book-meta {
+        grid-area: meta;
+        text-align: right; /* optional */
+    }
+
+    .book-content {
+        grid-area: content;
+    }
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 4px solid #e2c49b;
+    background-color: #ffffff;
+    font-weight: bold;
+}

@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
-} */
-
 header,
 footer {
-    max-width: 1500px;
     margin: 0 auto;
     border: 1px solid #ccc;
     padding: 1rem;
@@ -20,10 +13,9 @@ footer {
 }
 
 main {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: lightgrey;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: lightgrey;
 }
 
 h1 {
@@ -52,11 +44,22 @@ img {
     object-fit: cover;
     margin: 15px;
     border: 5px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
     padding: 20px;
     color: white;
+    /* display: none; */
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide {
     display: none;
 }
 
@@ -77,16 +80,102 @@ footer {
     text-align: center;
 }
 
-@media (min-width: 1200px) {
-  .menu-btn {
-    display: none;
-  }
+dialog {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    padding: 0;
+    background: transparent;
 
-  nav a {
-    display: inline-block;
-    padding: 0 15px;
-    color: white;
-    text-decoration: none;
-  }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: 10vh auto;
+}
+
+.modal-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.modal-wrapper img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 110vw;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 60px;
+    right: -26px;
+
+    width: 28px;
+    height: 28px;
+
+    background: white;
+    color: black;
+    border: 1px solid #999;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 0 15px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 768px) {
+    dialog {
+        padding: 40px;
+        /* more space on desktop */
+
+    }
+}
+
+@media (max-width: 767px) {
+    dialog {
+        padding: 16px;
+    }
+
+    .modal-wrapper img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 85vw;
+        max-height: 60vh;
+        object-fit: contain;
+    }
+}

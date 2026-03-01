@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  font-size: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* Credit Card Styling */
+.card {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card input {
+  background: rgba(255,255,255,0.9);
+}
+
+.exp-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.exp-inputs input {
+  width: 50%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+}
+
+.errors {
+  white-space: pre-line;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.hide {
+  display: none;
+}

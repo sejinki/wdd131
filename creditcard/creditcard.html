@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="creditcard form">
+  <meta name="author" content="sejinki">
+  <title>Credit Card Form</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="creditcard.css"/>
+  <script defer src="creditcard.js"></script>
+</head>
+
+<body>
+<header><h1>Checkout</h1></header>
+
+<main>
+  <section class="errors"></section>
+
+  <form id="checkoutForm" action="completed.html" method="get">
+
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="paymentMethod">Payment Method</label>
+    <select id="paymentMethod" name="paymentMethod" required aria-expanded="false">
+      <option value="">Select Payment Method</option>
+      <option value="creditCard">Credit Card</option>
+      <option value="paypal">PayPal</option>
+    </select>
+
+    <!-- CREDIT CARD SECTION -->
+    <div id="creditCardNumberContainer" class="hide card" role="region" aria-labelledby="creditCardLabel">
+      
+      <h2>💳 Credit Card</h2>
+
+      <label id="creditCardLabel" for="creditCardNumber">Card Number</label>
+      <input
+        type="text"
+        id="creditCardNumber"
+        name="creditCardNumber"
+        placeholder="1234123412341234"
+        pattern="[0-9]{16}"
+      />
+
+      <!-- Proper ARIA group for expiration -->
+      <div id="cardExpiration">
+        <label id="expirationDate">Expiration</label>
+        <div class="exp-inputs">
+          <input type="text" id="month" name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
+          <input type="text" id="year" name="expYear" placeholder="YY" aria-labelledby="expirationDate">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PAYPAL SECTION -->
+    <div id="paypalUsernameContainer" class="hide" role="region" aria-labelledby="paypalLabel">
+      <label id="paypalLabel" for="paypalUsername">PayPal Username</label>
+      <input type="text" id="paypalUsername" name="paypalUsername">
+    </div>
+
+    <button type="submit">Place Order</button>
+  </form>
+</main>
+
+</body>
+</html>

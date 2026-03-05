@@ -1,6 +1,6 @@
 body {
     display: grid;
-    place-items: center;   /* shorthand for justify-items + align-items */
+    place-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #f5f5f5;

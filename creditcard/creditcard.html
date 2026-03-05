@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="credit card form">
+    <meta name="author" content="sejinki">
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="creditcard.css">
+</head>
+
+<body>
+
+    <form class="credit-card" action="#" method="POST">
+
+        <div class="card-container">
+            <div class="front">
+                <div class="card-data-row">
+                    <div class="brand-name">Total: $199</div>
+                    <span class="logo-emoji" role="img" aria-label="credit card">💳</span>
+
+                </div>
+
+                <fieldset class="form-group">
+                        <legend>Card Number</legend>
+                        <label for="cc-number">Card Number</label>
+                        <input type="text" id="cc-number" class="cc-input" placeholder="1234 5678 9101 1020" required
+                            pattern="[0-9]{16}" maxlength="16" inputmode="numeric">
+                </fieldset>
+
+                <div class="input-row">
+                    <div class="form-group name-group">
+                        <label for="name">Card Holder</label>
+                        <input type="text" id="name" required minlength="2" placeholder="John Doe">
+                    </div>
+
+                    <fieldset class="form-group expiration-group">
+                        <legend>Expiration</legend>
+                        <label for="exp-month">Expiration</label>
+                        <div class="horizontal-input-stack">
+                            <input type="text" id="exp-month" placeholder="MM" required pattern="(0[1-9]|1[0-2])"
+                                maxlength="2" inputmode="numeric" aria-labelledby="exp-month">
+
+                            <input type="text" id="exp-year" placeholder="YY" required pattern="[0-9]{2}" maxlength="2"
+                                inputmode="numeric" aria-labelledby="exp-year">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="form-group cvc-group">
+                    <label for="cvc">CVC/CVV</label>
+                    <input class="cvc-input" type="text" id="cvc" placeholder="xxx" required pattern="[0-9]{3}"
+                        maxlength="3" inputmode="numeric">
+                </div>
+            </div>
+        </div>
+        <div class="button-row">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

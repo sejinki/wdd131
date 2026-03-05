@@ -1,0 +1,161 @@
+.credit-card {
+    color: black;
+    display: grid;
+    gap: 1rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 325px;
+    grid-template-rows: 195px;
+    position: relative;
+    overflow: visible;
+}
+
+.front,
+.back {
+    background-color: lightgray;
+    border-radius: .5em;
+    width: 325px;
+    height: 150px;
+    padding: .75rem 1rem;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.front {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+}
+
+.back {
+    grid-column: 1;
+    grid-row: 1;
+    transform: translate(3.25rem, 2rem);
+    transform: translate(4rem, 2.25rem);
+    position: relative;
+    z-index: 1;
+}
+
+.card-data-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.logo {
+    width: 40px;
+    height: 50px;
+    justify-self: end;
+}
+
+.brand-name {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.form-group {
+    display: grid;
+    gap: .2rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset legend {
+    position: absolute;
+    left: -9999px;
+}
+
+label {
+    font-size: .65rem;
+    text-transform: uppercase;
+}
+
+input {
+    padding: .25em .5em;
+    border: none;
+    border-radius: .25em;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+}
+
+.horizontal-input-stack {
+    display: grid;
+    grid-auto-flow: column;
+    gap: .5rem;
+}
+
+#exp-month,
+#exp-year {
+    width: 4ch;
+    font-family: monospace;
+    text-align: LEFT;
+}
+
+.stripe {
+    background-color: black;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .5rem;
+}
+
+.cvc-group {
+    position: absolute;
+    bottom: 2.5rem;
+    right: .50rem;
+
+    display: grid;
+    gap: .25rem;
+}
+
+.cvc-input {
+    width: 5ch;
+    font-family: monospace;
+}
+
+.button-row {
+    width: 420px;
+    display: grid;
+    justify-items: end;
+    margin-top: 1rem;
+}
+
+.submit-btn {
+    padding: .5rem 1rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+.cc-input{
+    width: 28ch;
+}
+
+.logo-emoji {
+    font-size: 2rem;
+    justify-self: end;
+    align-self: center;
+}

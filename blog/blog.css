@@ -28,7 +28,7 @@ header h1 {
     list-style: none;
     padding: 0;
     margin: 0;
-
+    margin-right: 2rem;
     display: flex;
     justify-content: right;
     gap: 3rem;
@@ -58,16 +58,22 @@ header h1 {
     max-width: 900px;
     margin: 0 auto;
     padding-bottom: 2rem;
-    border-bottom: 3px solid #e2c49b;
+    /* border-bottom: 3px solid #e2c49b; */
+    border-bottom: none;
 }
 
 /* Book Title */
 
 .book h2 {
-    text-align: center;
-    font-size: 2rem;
+    /* text-align: center; */
+    grid-area: title;
+    text-align: left;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 1.6rem;
     color: #b22234;
-    margin-bottom: 1rem;
+    margin-bottom: .25rem;
+
 }
 
 .book img {
@@ -85,17 +91,26 @@ header h1 {
     margin-bottom: 1.5rem;
 }
 
+.book-content {
+    grid-area: content;
+    padding-left: 0;
+}
+
 .book-meta {
     text-align: left;
     grid-area: meta;
-    
 }
 
 #sum {
     max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
+
+.book-meta p:first-child {
+    font-style: italic;
+}
+
 
 @media (max-width: 767px) {
 
@@ -109,23 +124,34 @@ header h1 {
         padding: 0 1rem 1.5rem 1rem;
     }
 
+    .book h2 {
+        grid-area: title;
+        text-align: left;
+        margin: 0;
+    }
+
     .book-meta {
+        grid-area: meta;
         text-align: right;
     }
-
-    .book h2 {
+    .book-content {
+        grid-area: content;
+        padding-left: 0;
+    }
+    #sum {
+        margin: 0;
         text-align: left;
     }
-
 }
 
 @media (min-width: 768px) {
 
     .book {
-        grid-template-columns: 1fr 2fr;
+        display: grid;
+        grid-template-columns: 250px 2fr;
         grid-template-areas:
-            "title title"
-            "meta  content";
+            "meta title"
+            "meta content";
         gap: 2rem;
         align-items: start;
         padding: 0 2rem 2rem 2rem;
@@ -133,20 +159,27 @@ header h1 {
 
     .book h2 {
         grid-area: title;
-        text-align: right;
+        text-align: left;
+        margin: 0;
+    }
+    #sum {
+        margin: 0;
+        text-align: left;
     }
 
     .book-meta {
         grid-area: meta;
         text-align: right;
+        padding-right: 2rem;
+        border-right: 2px solid #e2c49b;
+        align-self: stretch;
     }
 
     .book-content {
         grid-area: content;
+        padding-left: 0;
     }
 }
-
-
 
 footer {
     text-align: center;

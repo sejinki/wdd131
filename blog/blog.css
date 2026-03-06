@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: Georgia, sans-serif;
     background-color: #f4f4f4;
     color: #222;
     line-height: 1.6;
@@ -58,14 +58,10 @@ header h1 {
     max-width: 900px;
     margin: 0 auto;
     padding-bottom: 2rem;
-    /* border-bottom: 3px solid #e2c49b; */
     border-bottom: none;
 }
 
-/* Book Title */
-
 .book h2 {
-    /* text-align: center; */
     grid-area: title;
     text-align: left;
     margin: 0;
@@ -111,6 +107,14 @@ header h1 {
     font-style: italic;
 }
 
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 4px solid #e2c49b;
+    border-bottom: 4px solid #e2c49b;
+    background-color: #ffffff;
+    font-weight: bold;
+}
 
 @media (max-width: 767px) {
 
@@ -179,12 +183,4 @@ header h1 {
         grid-area: content;
         padding-left: 0;
     }
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    border-top: 4px solid #e2c49b;
-    background-color: #ffffff;
-    font-weight: bold;
 }
